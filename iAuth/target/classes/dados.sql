@@ -1,0 +1,1 @@
+INSERT INTO USUARIO VALUES ('teste','AC', '2323232','1');
