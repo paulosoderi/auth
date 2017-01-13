@@ -29,9 +29,7 @@ public class UserDAO  {
 	}
 
 	public String findSequenceActivationCode() {
-		javax.persistence.Query query = manager.createNativeQuery(SQL_CONSULTA_SEQ_CHAVE);
-		String sequence = query.getSingleResult().toString();
-		return sequence;
+		return String.valueOf(User.sequenciaChaveAtivcao++);
 	}
 	
 	public User findUserByID(String id){

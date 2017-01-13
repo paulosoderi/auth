@@ -59,14 +59,14 @@ public class Application{
 	    LocalContainerEntityManagerFactoryBean lcemfb = new LocalContainerEntityManagerFactoryBean();
 
         lcemfb.setDataSource(this.hsqlInMemory());
-        lcemfb.setPackagesToScan(new String[] {"com.avenuecode.moviescriptscanner"});
+        lcemfb.setPackagesToScan(new String[] {"com.psoderi.autenticacao"});
 
         HibernateJpaVendorAdapter va = new HibernateJpaVendorAdapter();
 		lcemfb.setJpaVendorAdapter(va);
 
 		Properties ps = new Properties();
 		ps.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
-		ps.put("hibernate.hbm2ddl.auto", "update");
+		ps.put("hibernate.hbm2ddl.auto", "create");
 		ps.put("hibernate.show_sql", "true");
 		ps.put("hibernate.connection.username", "sa");
 		ps.put("hibernate.connection.password", "");

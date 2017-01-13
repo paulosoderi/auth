@@ -12,10 +12,10 @@ import javax.persistence.Transient;
 public class User {
 	
 	
+	
 	@Id
 	@Column(name = "login_user")
-	private String login;
-	
+	private String login;	
 	
 	@Column(name = "activation_code")
 	private String activationCode;
@@ -34,6 +34,9 @@ public class User {
 	
 	@Transient
 	private String oldPassword;
+	
+	@Transient
+	public static int sequenciaChaveAtivcao = 0;
 	
 	public User(){
 		
